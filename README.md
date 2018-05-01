@@ -5,7 +5,7 @@ Sample application that calculates and visualize differences between two images 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
-You need [Visual Studio for Mac](https://www.visualstudio.com/vs/mac/) intalled on your machine to run this example.
+You need [Visual Studio for Mac](https://www.visualstudio.com/vs/mac/) installed on your machine to run this example.
 * Clone the repository.
 * Open the solution file [ImageDiffDemo.sln](https://github.com/danipen/ImageDiffDemo/blob/master/ImageDiffDemo.sln)
 * Run the project.
