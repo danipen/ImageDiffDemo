@@ -3,39 +3,41 @@ namespace ImageDiffDemo.Common
 {
     public static class ImageDiffOperations
     {
+        public const string DIFF_SIZE_INFO_MESSSAGE =
+            "In order to calculate image differences, left and right images " +
+            "must be of the same lenght.";
+
         public static unsafe void CalculateImageDiff(
             IImageDiffView diffView, IProgressControls progressControls,
             byte* leftBitmapData, byte* rightBitmapData, int leftLen, int rightLen)
         {
             if (leftLen != rightLen)
             {
-                progressControls.ShowInformation(
-                    "In order to calculate image differences, left and right images " + 
-                    "must be of the same lenght.");
+                progressControls.ShowInformation(DIFF_SIZE_INFO_MESSSAGE);
                 return;
             }
 
-            byte[] diffImage = null;
+            byte[] resultDiffImage = null;
 
-            //progressControls.ShowProgress("Calculating image diffs...");
+            progressControls.ShowProgress();
 
             IThreadWaiter waiter = ThreadWaiter.GetWaiter();
             waiter.Execute(
                 /*threadOperationDelegate*/ delegate
                 {
-                diffImage = PixelDiff(leftBitmapData, rightBitmapData, leftLen);
+                    resultDiffImage = PixelDiff(leftBitmapData, rightBitmapData, leftLen);
                 },
                 /*afterOperationDelegate*/ delegate
                 {
-                    //progressControls.HideProgress();
+                    progressControls.HideProgress();
 
                     if (waiter.Exception != null)
                     {
-                        //progressControls.ShowError(waiter.Exception.Message);
+                        progressControls.ShowError(waiter.Exception.Message);
                         return;
                     }
 
-                    diffView.SetDiffImageBytes(diffImage);
+                    diffView.SetDiffImageBytes(resultDiffImage);
                 });
         }
 
