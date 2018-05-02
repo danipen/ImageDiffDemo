@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageDiffDemo", "ImageDiffD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageDiffDemo.Common", "ImageDiffDemo.Common\ImageDiffDemo.Common.csproj", "{AB6444E5-E1F9-4FF1-BB7B-DB40029B2A9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageDiffDemo.Tests", "ImageDiffDemo.Tests\ImageDiffDemo.Tests.csproj", "{7076C521-5E5A-4102-B125-1B3948C1453C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,5 +21,9 @@ Global
 		{AB6444E5-E1F9-4FF1-BB7B-DB40029B2A9C}.Debug|x86.Build.0 = Debug|Any CPU
 		{AB6444E5-E1F9-4FF1-BB7B-DB40029B2A9C}.Release|x86.ActiveCfg = Release|Any CPU
 		{AB6444E5-E1F9-4FF1-BB7B-DB40029B2A9C}.Release|x86.Build.0 = Release|Any CPU
+		{7076C521-5E5A-4102-B125-1B3948C1453C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7076C521-5E5A-4102-B125-1B3948C1453C}.Debug|x86.Build.0 = Debug|Any CPU
+		{7076C521-5E5A-4102-B125-1B3948C1453C}.Release|x86.ActiveCfg = Release|Any CPU
+		{7076C521-5E5A-4102-B125-1B3948C1453C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
