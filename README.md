@@ -12,7 +12,7 @@ You need [Visual Studio for Mac](https://www.visualstudio.com/vs/mac/) installed
 
 ### How to use
 The following video shows how to use the software. In the sample we use the [sample images](https://github.com/danipen/ImageDiffDemo/tree/master/Images) provided in this repo. Note that images must be of the same size to calculate differences.
-![ImageDiffDemo](https://github.com/danipen/ImageDiffDemo/blob/master/Demo/export.gif)
+![ImageDiffDemo](https://github.com/danipen/ImageDiffDemo/blob/master/Demo/demo.gif)
 
 ## Authors
 * **Daniel Peñalba** - *Initial work* - [danipen](https://github.com/danipen)
